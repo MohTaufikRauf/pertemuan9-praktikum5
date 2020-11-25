@@ -1,39 +1,23 @@
-# pertemuan9-praktikum5
-tugas  ini dibuat untuk memenuhi pertemuan 9
 
-# PERTEMUAN9
-TUGAS DIBUAT UNTUK MEMENUHI TUGAS PADA PERTEMUAN 9
- 
+print("###############################################################")
+print("|                     Program Input Nilai                     |")
+print("###############################################################")
 
-### Nama : Moh. Taufik Rauf
-### Kelas : TI.20.A1
-### NIM : 312010151
-### Matkul : Bahasa Pemrograman
-________________________________________________________________________________________________________________
-## Program Data Mahasiswa
-pada praktikum 5 ini, saya akan membuat program sederhana untuk menginput data kedalam list.
+data = {}
 
+while True:
+    print("\n")
+    menu = input("(L) Lihat, (T) Tambah, (U) Ubah, (H) Hapus, (C) Cari, (K) Keluar: ")
+    print("\n")
 
-
-### Membuat Pintasan "Keluar"
-Kali ini kita akan membuat pintasan "keluar" dengan baris perintah sebagai berikut
-
-```python
+    # Keluar
     if menu.lower() == 'k':
         break
-```
 
-
-![tugas_9](praktikum5/1.PNG)<br>
-
-
-### Membuat Pintasan "lihat"
-dan ini adalah baris perintah untuk membuat perintah "lihat"
-
-```python
+    # Lihat
     elif menu.lower() == 'l':
         print("Daftar Nilai:")
-        print("_______________________")
+        print("_________")
         print("| No |      Nama      |    NIM    | Tugas |  UTS  |  UAS  | Akhir |")
         print("===================================================================")
         no = 1
@@ -43,17 +27,8 @@ dan ini adalah baris perintah untuk membuat perintah "lihat"
                    tabel[1], tabel[2],
                    tabel[3], tabel[4], tabel[5]))
             no += 1
-```
 
-
-![tugas_9](praktikum5/no2.PNG)<br>
-
-
-
-### Membuat Pintasan "Tambah"
-kali ini kita akan membuat baris perintah "tambah" untuk menambahkan data baru kedalam syntax database tersebut, berikut adalah baris perintahnya:
-
-```python
+    # Tambah
     elif menu.lower() == 't':
         print("Masukan data mahasiswa")
         print("...")
@@ -62,10 +37,10 @@ kali ini kita akan membuat baris perintah "tambah" untuk menambahkan data baru k
         nilai_tugas = int(input("Masukan nilai tugas: "))
         nilai_uts = int(input("Masukan nilai UTS: "))
         nilai_uas = int(input("Masukan nilai UAS: "))
-        nilai_akhir = (nilai_tugas)*30/100 + (nilai_uts)*35/100 + (nilai_uas)*35/100 
+        nilai_akhir = (nilai_tugas)*30/100 + (nilai_uts)*35/100 + (nilai_uas)*35/100
         data[nama] = [nama, nim, nilai_tugas, nilai_uts, nilai_uas, nilai_akhir]
         print('\nData berhasil di tambah!')
-        print("_______________________")
+        print("_________")
         print("| No |      Nama      |    NIM    | Tugas |  UTS  |  UAS  | Akhir |")
         print("===================================================================")
         no = 1
@@ -75,19 +50,8 @@ kali ini kita akan membuat baris perintah "tambah" untuk menambahkan data baru k
                    tabel[1], tabel[2],
                    tabel[3], tabel[4], tabel[5]))
             no += 1
-```
 
-
-Berikut adalah tampilan outputnya;
-![tugas_9](praktikum5/no.3.PNG)<br>
-
-
-
-### Membuat Pintasan "Ubah"
-baris perintah dibawah ini digunakan untuk membuat pintasan "ubah" pada database, yang dimana pintasan ini berguna untuk mengubah data yang telah ada di dalam database tersebut. Disini, kita bisa mengubah nama, Nim, nilai tugas, nilai UTS serta nilai UAS. Sesuaikan data yang ingin kamu ganti. Seperti contoh dibawah, saya akan mengubah nama yang ada di dalam database.
-
-
-```python
+    # Ubah
     elif menu.lower() == 'u':
         nama = input("Masukan nama untuk mengubah data: ")
         if nama in data.keys():
@@ -102,9 +66,9 @@ baris perintah dibawah ini digunakan untuk membuat pintasan "ubah" pada database
                 data[nama][2] = int(input("Ubah Nilai Tugas: "))
                 data[nama][3] = int(input("Ubah Nilai UTS: "))
                 data[nama][4] = int(input("Ubah Nilai UAS: "))
-                data[nama][5] = data[nama][2] *30/100 + data[nama][3]*35/100 + data[nama][4] *35/100 
+                data[nama][5] = data[nama][2] *30/100 + data[nama][3]*35/100 + data[nama][4] *35/100
                 print("\nBerhasil ubah data!")
-                print("_______________________")
+                print("_________")
                 print("| No |      Nama      |    NIM    | Tugas |  UTS  |  UAS  | Akhir |")
                 print("===================================================================")
                 no = 1
@@ -131,18 +95,9 @@ baris perintah dibawah ini digunakan untuk membuat pintasan "ubah" pada database
 
         else:
             print("'{}' tidak ditemukan.".format(nama))
-```
 
-
-Berikut adalah tampilan outputnya;
-![tugas_9](praktikum5/no4.PNG)<br>
-
-
-### Membuat Pintasan "Cari"
-Pintasan "cari" dibuat untuk memudahkan kita mencari data yang kita inginkan di dalam database, baris perintahnya adalah
-
-```python
- elif menu.lower() == 'c':
+    # Cari
+    elif menu.lower() == 'c':
         print("Mencari data: ")
         print("=================================================")
         nama = input("Masukan nama untuk mencari data: ")
@@ -154,17 +109,8 @@ Pintasan "cari" dibuat untuk memudahkan kita mencari data yang kita inginkan di 
                                 data[nama][4], data[nama][5]))
         else:
             print("'{}' tidak ditemukan.".format(nama))
-```
 
-
-Berikut adalah tampilan outputnya;
-![tugas_9](praktikum5/no5.PNG)<br>
-
-
-### Membuat Pintasan "Hapus"
-Pintasan "hapus" ini berfungsi untuk menghapus data yang ada di dalam database, berikut adalah baris perintahnya
-
-```python
+    # Hapus
     elif menu.lower() == 'h':
         nama = input("Masukan nama untuk menghapus sub_data : ")
         if nama in data.keys():
@@ -175,16 +121,3 @@ Pintasan "hapus" ini berfungsi untuk menghapus data yang ada di dalam database, 
 
     else:
         print("Upss ada yang salah, silahkan cek kembali.")
-```
-
-
-Berikut adalah tampilan outputnya;
-![tugas_9](praktikum5/no5.PNG)<br>
-
-
-### Hasil Akhir
-
-Pada pertemuan kali ini hasil akhir atau tampilan output yang diminta oleh bapak/ibu dosen pada praktikum 5 adalah sebagai berikut
-
-Berikut adalah tampilan outputnya;
-![tugas_9](praktikum5/no7.PNG)<br>
