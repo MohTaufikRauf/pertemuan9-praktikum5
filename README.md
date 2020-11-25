@@ -24,7 +24,7 @@ Kali ini kita akan membuat pintasan "keluar" dengan baris perintah sebagai berik
 ```
 
 
-![tugas_9](praktikum5/1.PNG)<br>
+![tugas_9](praktikum5/no1.PNG)<br>
 
 
 ### Membuat Pintasan "lihat"
@@ -79,7 +79,7 @@ kali ini kita akan membuat baris perintah "tambah" untuk menambahkan data baru k
 
 
 Berikut adalah tampilan outputnya;
-![tugas_9](praktikum5/no.3.PNG)<br>
+![tugas_9](praktikum5/no3.PNG)<br>
 
 
 
@@ -179,7 +179,7 @@ Pintasan "hapus" ini berfungsi untuk menghapus data yang ada di dalam database, 
 
 
 Berikut adalah tampilan outputnya;
-![tugas_9](praktikum5/no5.PNG)<br>
+![tugas_9](praktikum5/no6.PNG)<br>
 
 
 ### Hasil Akhir
